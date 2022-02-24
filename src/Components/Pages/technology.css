@@ -1,0 +1,81 @@
+#root{
+    --white: #FFFFFF;
+    --purple: #D0D6F9;
+    --dark: #0B0D17;
+    --fontBelle: 'Bellefair', serif;
+    --fontBarlowC: 'Barlow Condensed', sans-serif; 
+    --fontBarlow: 'Barlow', sans-serif;
+}
+
+.technology{
+    background: url(../../assets/technology/background-technology-desktop.jpg);
+    width: 100vw;
+    height: 100vh;
+    color: white;
+}
+
+.technology .techWrapper{
+    display: flex;
+    height: 500px;
+    position: absolute;
+    right: 0;
+    bottom: 60px;
+    margin-left: 160px;
+}
+
+.technology .techNav{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.technology .techBtn{
+    width: 80px;
+    height: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: none;
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 32px;
+    font-family: var(--fontBelle);
+    margin: 20px;
+}
+
+.technology .techBtn:hover{
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.technology .techBtn.active{
+    background:  rgba(255, 255, 255, 1);
+    color: var(--dark);
+}
+
+.technology .techInfo{
+    align-self: center;
+    margin: 0px 120px 0px 40px;
+    max-width: 600px;
+}
+
+.technology .techInfo h2{
+    color: var(--purple);
+    font-family: var(--fontBarlowC);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.technology .techInfo .techName{
+    font-size: 56px;
+    font-family: var(--fontBelle);
+    margin: 10px;
+    text-transform: uppercase;
+}
+
+.technology .techInfo .techDescription{
+    
+    font-family: var(--fontBarlow);
+    color: var(--purple);
+    font-size: 18px;
+    line-height: 1.6;
+}

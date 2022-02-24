@@ -1,0 +1,110 @@
+#root{
+    --white: #FFFFFF;
+    --purple: #D0D6F9;
+    --dark: #0B0D17;
+    --fontBelle: 'Bellefair', serif;
+    --fontBarlowC: 'Barlow Condensed', sans-serif; 
+    --fontBarlow: 'Barlow', sans-serif;
+}
+.destination {
+    background: url(../../assets/destination/background-destination-desktop.jpg);
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.destination .destinationInfo{
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 300px;
+    left: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: var(--white);
+    max-width: 1000px;
+}
+
+.destination .destinationInfo aside{
+    margin: 0px 35px;
+}
+
+.destination .destinationBtn{
+    font-family: var(--fontBarlowC);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background: none;
+    border: none;
+    color:var(--purple);
+    font-size: 16px;
+    margin-right: 30px;
+    padding: 10px 0px;
+    position: relative;;
+}
+
+.destination .destinationBtn::after{
+    content: '';
+    display: block;
+    position: absolute;
+    margin: 0;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: 0;
+    background-color: #979797;
+    transition: width 0.3s ease-in-out;
+}
+
+.destination .destinationBtn:hover::after{
+    width: 100%;
+}
+
+.destination .destinationBtn.active{
+    /* font-weight: bold; */
+    color: var(--white);
+}
+
+.destination .destinationBtn.active::after{
+    width: 100%;
+    background-color: var(--white);
+}
+
+.destination .destinationTitle{
+    color: var(--white);
+    font-family: var(--fontBelle);
+    font-size: 100px;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.destination .destinationDescription{
+    color: var(--purple);
+    font-family: var(--fontBarlow);
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 50px;
+}
+
+.destination hr{
+    border: 0.1px solid #979797b4
+}
+
+.destination footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.destination footer h2{
+    text-transform: uppercase;
+    color: var(--purple);
+    font-family: var(--fontBarlowC);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.destination footer h3{
+    text-transform: uppercase;
+    color: var(--white);
+    font-family: var(--fontBelle);
+    font-size: 28px;
+}

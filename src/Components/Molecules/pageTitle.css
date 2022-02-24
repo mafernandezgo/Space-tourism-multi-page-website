@@ -1,0 +1,28 @@
+#root{
+    --white: #FFFFFF;
+    --purple: #D0D6F9;
+    --dark: #0B0D17;
+    --fontBelle: 'Bellefair', serif;
+    --fontBarlowC: 'Barlow Condensed', sans-serif; 
+    --fontBarlow: 'Barlow', sans-serif;
+}
+
+.pageTitle{
+    position: absolute;
+    left: 160px;
+    top: 200px
+}
+
+.pageTitle .title{
+    font-family: var(--fontBarlowC);
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--white);
+}
+
+.pageTitle .numTitle{
+    font-weight: bold;
+    color: #979797;
+}

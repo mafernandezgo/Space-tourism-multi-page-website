@@ -1,0 +1,84 @@
+#root{
+    --white: #FFFFFF;
+    --purple: #D0D6F9;
+    --dark: #0B0D17;
+    --fontBelle: 'Bellefair', serif;
+    --fontBarlowC: 'Barlow Condensed', sans-serif; 
+    --fontBarlow: 'Barlow', sans-serif;
+}
+
+.home{
+    background: url(../../assets/home/background-home-desktop.jpg);
+    height: 100vh;
+    margin: 0;
+    width: 100vw;
+}
+
+.home .homeInfo{
+    bottom: 160px;
+    left: 160px;
+    position: absolute;
+    width: 450px;
+}
+
+.home .homeInfo p:nth-child(1) {
+    color: var(--purple);
+    font-family: var(--fontBarlowC);
+    font-size: 28px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.homeTitle{
+    color: var(--white);
+    font-family: var(--fontBelle);
+    font-size: 150px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.home .homeInfo p:nth-child(3) {
+    color: var(--purple);
+    font-family: var(--fontBarlow);
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.home .exploreButton{
+    align-items: center;
+    background: var(--white);
+    border-radius: 50%;
+    color: var(--dark);
+    display: flex;
+    font-family: var(--fontBelle);
+    font-size: 32px;
+    height: 280px;
+    justify-content: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    width: 280px;
+    position: absolute;
+    bottom: 160px;
+    right: 160px;
+}
+
+.exploreButton::after{
+    content: "";
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    background: transparent;
+    position: absolute;
+    transition: all 0.4s linear;
+}
+
+.exploreButton:hover::after{
+
+    background: rgba(253, 253, 253, 0.1);
+
+}
+
+
+
+
+

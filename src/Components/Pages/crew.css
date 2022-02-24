@@ -1,0 +1,76 @@
+#root{
+    --white: #FFFFFF;
+    --purple: #D0D6F9;
+    --dark: #0B0D17;
+    --fontBelle: 'Bellefair', serif;
+    --fontBarlowC: 'Barlow Condensed', sans-serif; 
+    --fontBarlow: 'Barlow', sans-serif;
+}
+
+.crew{
+    background: url(../../assets/crew/background-crew-desktop.jpg) no-repeat;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    font-size: 20px;
+}
+
+.crewWrapper{
+    display: grid;
+    position: absolute;
+    bottom: 0;
+    width: 88%;
+    grid-template-columns: 1fr 1fr;
+    left: 160px;
+    align-items: flex-end;
+}
+
+.crew .crewRole{
+    color:#979797;
+    font-size: 32px;
+    font-family: var(--fontBelle);
+    text-transform: uppercase;
+}
+
+.crew .crewName{
+    color:var(--white);
+    font-size: 56px;
+    font-family: var(--fontBelle);
+    text-transform: uppercase;
+    margin: 10px 0px
+}
+
+.crew .crewBio{
+    color:var(--purple);
+    font-size: 18px;
+    font-family: var(--fontBarlow);
+    margin: 10px 0px;
+    line-height: 1.6;
+    max-width: 444px;
+}
+.crew .aside{
+    max-width: 450px;
+    justify-self: center;
+}
+
+.crew .crewNav{
+    margin: 100px 0px;
+    display:flex
+}
+
+.crew .crewBtn{
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.crew .crewBtn:hover{
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.crew .crewBtn.active{
+    background-color: var(--white);
+}
