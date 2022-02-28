@@ -1,18 +1,6 @@
 import {useState} from 'react'
 import PageTitle from '../Molecules/PageTitle'
-import douglasImg from '../../assets/crew/image-douglas-hurley.png'
-import markImg from '../../assets/crew/image-mark-shuttleworth.png'
-import victorImg from '../../assets/crew/image-victor-glover.png'
-import anoushehImg from '../../assets/crew/image-anousheh-ansari.png'
 import './crew.css'
-
-const imgCrew = [
-    douglasImg,
-    markImg,
-    victorImg,
-anoushehImg
-
-]
 
 function Crew ({data} = data){
     const {crew} = data
@@ -38,7 +26,7 @@ function Crew ({data} = data){
                         <div onClick={crewBtnHandler} className={`crewBtn ${ crewIndex === 3 && 'active'}`} data-crew="3"></div>
                     </nav>
                 </section>
-                <img className="aside" src={imgCrew[crewIndex]} alt={crew[crewIndex].name}/>
+                <img className="aside" src={ process.env.PUBLIC_URL + crew[crewIndex].images.png} alt={crew[crewIndex].name}/>
             </div>
         </div>
     )

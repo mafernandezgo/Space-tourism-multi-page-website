@@ -1,0 +1,85 @@
+#root{
+    --white: #FFFFFF;
+    --purple: #D0D6F9;
+    --dark: #0B0D17;
+    --fontBelle: 'Bellefair', serif;
+    --fontBarlowC: 'Barlow Condensed', sans-serif; 
+    --fontBarlow: 'Barlow', sans-serif;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top:40px;
+    left:0px;
+    width: 100%;
+    height: 96px;
+}
+.header .logo{
+    margin: 50px;
+}
+
+.header .line{
+    background-color: #979797;
+    width: 350px;
+    height: 1px;
+}
+
+.header .menuIcon{
+    display: none;
+    overflow: hidden;
+}
+
+.phoneNav{
+    backdrop-filter: blur(50px);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 60%;
+    z-index: 1;
+}
+
+.phoneNav .closeIcon{
+    align-self: flex-end;
+    margin: 40px 30px;
+    width: 20px;
+}
+
+@media (max-width:1000px){
+
+    .header{
+        top: 0px;
+    }
+
+    .header .logo{
+        margin: 40px;
+    }
+
+    .header .line{
+        display: none;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 500px){
+
+    .header .logo{
+        width: 40px;
+    }
+    
+    .header .filter{
+        display: none;
+        overflow: hidden;
+    }
+
+    .header .menuIcon{
+        display: block;
+        overflow:visible;
+        margin: 0px 30px
+    }
+}

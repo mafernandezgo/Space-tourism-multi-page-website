@@ -1,17 +1,6 @@
 import {useState} from 'react'
 import PageTitle from '../Molecules/PageTitle'
 import './destination.css'
-import moonImg from '../../assets/destination/image-moon.png'
-import marsImg from '../../assets/destination/image-mars.png'
-import europaImg from '../../assets/destination/image-europa.png'
-import titanImg from '../../assets/destination/image-titan.png'
-
-const imgDest = [
-        moonImg,
-        marsImg,
-        europaImg,
-        titanImg
-    ]
 
 
 function Destination ({data} = data){
@@ -28,8 +17,7 @@ function Destination ({data} = data){
 
 
             <section className="destinationInfo">
-                <img src={imgDest[index]} alt={destinations[index].name} />
-                {/* <img src={moonImg} /> */}
+                <img className="destinationImg" src={ process.env.PUBLIC_URL + destinations[index].images.png} alt={destinations[index].name} />
                 <aside>
                     <nav className="destinationNav">
                         <button onClick={handleClick} data-dest="0" className={`destinationBtn ${ index === 0 && 'active'}`}>{destinations[0].name}</button>

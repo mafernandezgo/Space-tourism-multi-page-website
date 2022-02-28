@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {HashRouter as Router, Routes, Route} from 'react-router-dom'
 import AppContext from './Components/AppContext'
 import useInitialState from './Components/useInitialState'
 import './App.css';
@@ -16,17 +16,17 @@ function App() {
   const initialState = useInitialState()
   return (
     <AppContext.Provider value={initialState}>
-      <BrowserRouter>
+      <Router>
         <Layout >
           <Routes>
-            <Route exact path="/" element={<Home/>} />
-            <Route exact path="/destination" element={<Destination data = {data} />} />
-            <Route exact path="/crew" element={<Crew data = {data} /> } />
-            <Route exact path="/technology" element={<Technology data = {data} />} />
-            {/* <Route exact path="*" element={<NotFound/>} /> */}
+              <Route index element={<Home/>} />
+              <Route path="destination" element={<Destination data = {data} />} />
+              <Route path="crew" element={<Crew data = {data} /> } />
+              <Route path="technology" element={<Technology data = {data} />} />
+              {/* <Route exact path="*" element={<NotFound/>} /> */}
           </Routes>
         </Layout>
-      </BrowserRouter>
+      </Router>
     </AppContext.Provider>
   );
 }

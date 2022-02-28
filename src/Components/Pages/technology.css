@@ -8,7 +8,9 @@
 }
 
 .technology{
-    background: url(../../assets/technology/background-technology-desktop.jpg);
+    background: url(../../assets/technology/background-technology-desktop.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
     width: 100vw;
     height: 100vh;
     color: white;
@@ -21,6 +23,10 @@
     right: 0;
     bottom: 60px;
     margin-left: 160px;
+}
+
+.technology .aside{
+    display: flex;
 }
 
 .technology .techNav{
@@ -68,7 +74,6 @@
 .technology .techInfo .techName{
     font-size: 56px;
     font-family: var(--fontBelle);
-    margin: 10px;
     text-transform: uppercase;
 }
 
@@ -78,4 +83,97 @@
     color: var(--purple);
     font-size: 18px;
     line-height: 1.6;
+}
+
+@media(max-width:1000px){
+
+    .technology{
+        background: url(../../assets/technology/background-technology-tablet.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .technology .techWrapper{
+        flex-direction: column-reverse;
+        width: 100%;
+        bottom: 0px;
+        align-items: center;
+    }
+
+    .technology .techNav {
+    flex-direction: row;
+    margin: 30px 0px 0px
+    }
+
+    .technology .aside{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .technology .techBtn{
+        width: 58px;
+        height: 58px;
+        margin: 10px;
+        font-size: 24px;
+    }
+
+    .technology .techInfo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0px;
+    }
+
+    .technology .techInfo .techName {
+        font-size: 40px;
+        margin:0px
+    }
+
+    .technology .techDescription{
+        text-align: center;
+        margin: 20px 60px 80px
+    }
+
+    .technology picture{
+        width: 100%;
+    }
+
+    .technology img{
+        width: 100%;
+    }
+}
+
+@media(max-width:500px){
+    .technology{
+        background: url(../../assets/technology/background-technology-mobile.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .technology .techWrapper{
+        justify-content: flex-end;
+        top: 150px;
+        height: fit-content;
+    }
+
+    .technology .techBtn{
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .technology .techInfo h2{
+        font-size: 15px;
+    }
+
+    .technology .techInfo .techName {
+        font-size: 24px;
+    }
+
+    .technology .techInfo .techDescription{
+        margin: 0px 20px;
+        font-size: 15px;
+    }
+
 }

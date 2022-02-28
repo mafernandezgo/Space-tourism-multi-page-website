@@ -1,0 +1,119 @@
+
+.navHeader{
+    background-color: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(50px);
+    min-width: 300px;
+    height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+}
+
+.navHeader .liPage{
+    margin: 0px 20px;
+    font-family: var(--fontBarlowC);
+    color: var(--white);
+    padding: 38px 0px;
+    height: 15px;
+    transition: border-bottom 2s;
+    position: relative;
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+
+.navHeader .liPage::after{
+    content: '';
+    display: block;
+    position: absolute;
+    margin: 0;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #979797;
+    transition: width 0.3s ease-in-out;
+}
+
+.liPage:hover::after {
+    width: 100%
+}
+
+.navHeader .liPage.active::after{
+    content: '';
+    display: block;
+    position: absolute;
+    margin: 0;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+}
+
+.navHeader .liPage span{
+    font-weight: 700;
+    margin: 0px 8px 0px 0px;
+}
+
+@media (max-width:1000px){
+
+    .navHeader{
+        width: 450px;
+    }
+
+    .navHeader .liPage span{
+        display: none;
+        overflow: hidden;
+    }
+}
+
+@media (max-width:500px){
+    .navHeader{
+        background-color: rgba(255, 255, 255, 0.0);
+        backdrop-filter: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: auto;
+        padding: 20px 0px;
+        width: auto;
+    }
+
+    .navHeader .liPage span{
+        display: block;
+        overflow:visible
+    }
+
+    .navHeader .liPage{
+        display: flex;
+        width: 90%;
+    }
+
+    .navHeader .liPage::after{
+        content: '';
+        display: block;
+        position: absolute;
+        margin: 0;
+        height: 20px;
+        width: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #979797;
+        transition: width 0.3s ease-in-out;
+        
+    }
+
+    .navHeader .liPage.active::after{
+    content: '';
+    display: block;
+    position: absolute;
+    margin: 0;
+    height: 100%;
+    width: 3px;
+    left: 100%;
+    bottom: 0;
+    background-color: white;
+    }
+}

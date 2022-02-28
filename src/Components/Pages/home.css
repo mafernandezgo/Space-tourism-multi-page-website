@@ -8,16 +8,30 @@
 }
 
 .home{
-    background: url(../../assets/home/background-home-desktop.jpg);
+    background: url(../../assets/home/background-home-desktop.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
     height: 100vh;
     margin: 0;
     width: 100vw;
 }
 
+.home .homeWrapper{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    margin: 160px 0px;
+    align-items: end;
+    justify-items: center;
+
+}
+
 .home .homeInfo{
     bottom: 160px;
     left: 160px;
-    position: absolute;
     width: 450px;
 }
 
@@ -57,9 +71,6 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     width: 280px;
-    position: absolute;
-    bottom: 160px;
-    right: 160px;
 }
 
 .exploreButton::after{
@@ -73,8 +84,60 @@
 }
 
 .exploreButton:hover::after{
-
     background: rgba(253, 253, 253, 0.1);
+
+}
+
+@media(max-width:1000px) {
+    .home{
+        background: url(../../assets/home/background-home-tablet.jpg) no-repeat;
+        background-position:center ;
+        background-size: cover;
+    }
+    
+    .home .homeWrapper{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        top: 100px;
+        margin: 0px;
+        align-items: start;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .home .homeInfo {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .home .homeInfo p:nth-child(1) {
+        font-size: 16px;
+    }
+    
+    .homeTitle{
+        font-size: 80px;
+    }
+    
+    .home .homeInfo p:nth-child(3) {
+        font-size: 15px;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .home .exploreButton{
+        font-size: 20px;
+        height: 150px;
+        width: 150px;
+    }
+    
+    .exploreButton::after{
+        content: "";
+        height: 0px;
+        width: 0px;
+    }
 
 }
 
